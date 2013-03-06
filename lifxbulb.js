@@ -8,7 +8,7 @@
 var     fs  = require('fs');
 var     net = require('net');
 var  Schema = require('protobuf').Schema;
-var  schema = new Schema(fs.readFileSync('lifx.desc'));
+var  schema = new Schema(fs.readFileSync('protobuf/lifx.desc'));
 var Command = schema['lifx.Command'];
 var       r = 0,
           g = 0,
@@ -17,7 +17,7 @@ var       r = 0,
 
 var lifxbulb = net.createServer( function (socket) {
     socket.on('data', function(data) {
-        num++;
+        n++;
         var command = Command.parse(data);
         console.log("Message "+n+" received for client: " + command.client +
             ".  R: "+command.red +
