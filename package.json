@@ -1,0 +1,30 @@
+{
+  "name": "lifx.js",
+  "preferGlobal": false,
+  "version": "0.0.1",
+  "author": "Justin J. Novack <justin.j.novack@acm.org>",
+  "description": "Control your LIFX environment from nodejs",
+  "contributors": [ 
+    {
+      "name": "Justin J. Novack",
+      "email": "justin.j.novack@acm.org"
+    } 
+  ],
+  "repository": "git://github.com/jnovack/lifx.js.git",
+  "dependencies": {
+    "protobuf" : ">= 0.8.6"
+    "socket.io" : ">= 0.9.13"
+  },
+  "scripts": {
+    "start" : "node ./lifx.js"
+  },
+  "keywords": [
+    "lifx",
+    "protocol buffers",
+    "server"
+  ],
+  "license": "GPLv3",
+  "engines": {
+    "node": ">=0.8"
+  }
+}

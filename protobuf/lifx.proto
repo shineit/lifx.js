@@ -1,0 +1,12 @@
+// This is a TEMPORARY proto file for LIFX
+// As of this commit, the SDK has not been released.
+
+package lifx;
+message Command {
+    optional string client = 1;
+    optional int32 red = 2;
+    optional int32 green = 3;
+    optional int32 blue = 4;
+    optional int32 alpha = 5;
+}
+
