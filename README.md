@@ -1,26 +1,36 @@
 lifx.js - a node.js lifx implimentation
 ======================================
 
-This is an experimental project for node.js to control LIFX.  [LIFX](http://lifx.co) bulbs are controlled via protocol buffers.
-
+This is an experimental project for node.js to control LIFX.  [LIFX](http://lifx.co) bulbs are
+controlled via protocol buffers. At this time, LIFX has not publicly released
+the SDK, therefore, this is merely a proof of concept.
 
 Install with:
 
     cd node_modules/
     git clone https://github.com/jnovack/lifx.js
 
+Run the following, each within separate windows:
+
+    node ./lifxbulb.js
+    node ./lifx.js
+
+Finally, browse to http://localhost:8000 and hover over the color picker. In
+the `lifxbulb.js` window, you should see the messages being decoded.
+
 ## Dependencies
 
 LIFXjs needs the following dependencies to work.
 
   * nodejs >= 0.8.6
+  * socket.io >= 0.9.11
   * protobuf >= 0.8.6
 
 LIFXjs may work with prior versions, but is not tested.
 
 ## Contributing
 
-Please! You fork, I will merge.
+Please! Send me a pull-request, I will happily merge.
 
 ## License
 
