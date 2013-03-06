@@ -12,7 +12,7 @@
   ],
   "repository": "git://github.com/jnovack/lifx.js.git",
   "dependencies": {
-    "protobuf" : ">= 0.8.6"
+    "protobuf" : ">= 0.8.6",
     "socket.io" : ">= 0.9.13"
   },
   "scripts": {
