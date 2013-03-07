@@ -1,7 +1,7 @@
 lifx.js - a node.js LIFX implimentation
 =======================================
 
-[![Build Status](https://travis-ci.org/jnovack/lifx.js.png)](https://travis-ci.org/jnovack/lifx.js)
+[![Build Status](https://travis-ci.org/jnovack/lifx.js.png?branch=master)](https://travis-ci.org/jnovack/lifx.js)
 
 This is an experimental project for node.js to control LIFX.  [LIFX](http://lifx.co) bulbs are
 controlled via protocol buffers.
