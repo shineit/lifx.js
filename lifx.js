@@ -22,9 +22,9 @@ function browser (req, res) {
   var request = url.parse(req.url, true);
   var action = request.pathname;
 
-  if (action == '/colormap.gif') {
-     var img = fs.readFileSync('./www/colormap.gif');
-     res.writeHead(200, {'Content-Type': 'image/gif' });
+  if (action == '/color-picker.png') {
+     var img = fs.readFileSync('./www/color-picker.png');
+     res.writeHead(200, {'Content-Type': 'image/png' });
      res.end(img, 'binary');
   } else if (action == '/socket.io.min.js') {
     var s = fs.createReadStream('./socket.io.min.js');
