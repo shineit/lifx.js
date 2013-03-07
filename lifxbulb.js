@@ -37,9 +37,9 @@ lifxbulb.listen(5139);
  */
 
 var app = require('http').createServer(browser);
-app.listen(8002);
+app.listen(8008);
 
 function browser (req, res) {
-    res.writeHead(200);
-    res.end("<html><body style='background-color: rgba("+r+','+g+','+b+");</body></html>\n");
+    res.writeHead(200, { 'Content-type': 'text/html' });
+    res.end("<html><body style='background-color: rgb("+r+','+g+','+b+");'></body></html>\n");
 }
