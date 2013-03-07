@@ -26,7 +26,12 @@ Run the following, each within separate windows:
     node ./lifx.js
 
 Finally, browse to [http://localhost:8000](http://localhost:8000) and hover over the color picker. In
-the `lifxbulb.js` window, you should see the messages being decoded.
+the `lifxbulb.js` window, you should see the messages being decoded. To see what
+your lifxbulb might respond like, open another browser window and go to
+[http://localhost:8008](http://localhost:8008) to watch the colors change.
+
+If you are having trouble, change your browser to something that supports modern
+web extensions, such as the latest Chrome, FireFox or Safari.
 
 ## Dependencies
 
