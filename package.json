@@ -2,6 +2,7 @@
   "name": "lifx.js",
   "preferGlobal": false,
   "version": "0.0.4",
+  "bin" : { "lifx.js" : "./lifx.js", "lifxbulb.js" : "./lifxbulb.js" },
   "author": "Justin J. Novack <justin.j.novack@acm.org>",
   "description": "Control your LIFX environment from nodejs",
   "contributors": [
