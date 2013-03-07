@@ -20,7 +20,7 @@ function RGBtoHEX(red, green, blue)
     var color = blue + (256 * green) + (65536 * red);
     return pad(color.toString(16), 6);
 }
-var socket = io.connect('http://localhost:8008');
+var socket = io.connect(document.location);
 socket.on('color', function(data) {
     console.log(data);
     var hex = RGBtoHEX(data.red, data.green, data.blue);
