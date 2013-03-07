@@ -55,12 +55,21 @@ function browser (req, res) {
      var img = fs.readFileSync('./www/color-picker.png');
      res.writeHead(200, {'Content-Type': 'image/png' });
      res.end(img, 'binary');
+  } else if (action == '/bootstrap.min.css') {
+    // TODO: This is not working correctly, currently file is included in index.html
+    var s = fs.createReadStream('./www/bootstrap.min.css');
+    s.on('error', function () {
+        res.writeHead(404);
+        res.end();
+    })
+    s.once('fd', function () {req.writeHead(200, { 'Content-Type':'text/css'});});
+    s.pipe(res);
   } else if (action == '/socket.io.min.js') {
     // TODO: This is not working correctly, currently file is included in index.html
     var s = fs.createReadStream('./socket.io.min.js');
     s.on('error', function () {
-        req.writeHead(404);
-        req.end();
+        res.writeHead(404);
+        res.end();
     })
     s.once('fd', function () {req.writeHead(200, { 'Content-Type':'text/javascript'});});
     s.pipe(res);
