@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>lifx.js Color Picker</title>
-    <!-- Stolen unceremoniously from http://www.w3schools.com/tags/ref_colorpicker.asp //-->
     <script type="text/javascript">
     // TODO - This is included as I cannot figure out why serving .js files fails. :( --JJN 20130306
     /*! Socket.IO.min.js build:0.9.11, production. Copyright(c) 2011 LearnBoost <dev@learnboost.com> MIT Licensed */
@@ -34,6 +33,7 @@
     and change the color here.</p>
     <canvas id="myCanvas" width="800" height="600"></canvas>
     <script>
+      /* Unceremoniously stolen from http://www.html5canvastutorials.com/labs/html5-canvas-color-picker/ */
       function getMousePos(canvas, evt) {
         var rect = canvas.getBoundingClientRect();
         return {
