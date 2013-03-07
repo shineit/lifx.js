@@ -21,7 +21,6 @@ app.listen(8000);
 function browser (req, res) {
   var request = url.parse(req.url, true);
   var action = request.pathname;
-  console.log(action);
 
   if (action == '/colormap.gif') {
      var img = fs.readFileSync('./www/colormap.gif');
@@ -33,8 +32,8 @@ function browser (req, res) {
         req.writeHead(404);
         req.end();
     })
-    s.once('fd', function () {req.writeHead(200);});
-    s.pipe(resp);
+    s.once('fd', function () {req.writeHead(200, { 'Content-Type':'text/javascript'});});
+    s.pipe(res);
   } else if (action == '/favicon.ico') {
      res.writeHead(404);
      res.end();
