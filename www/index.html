@@ -80,6 +80,18 @@
         context.strokeStyle = '#444';
         context.lineWidth = 2;
 
+        context.fillStyle = "black";
+        context.font = "bold 16px Arial";
+        context.fillText("Selection", 580, 200);
+
+        context.font = "14px Arial";
+        var text1 = "This is not the bulb,";
+        var text2 = "click the button above";
+        var text3 = "to open a bulb page.";
+        context.fillText(text1, 590, 320);
+        context.fillText(text2, 590, 340);
+        context.fillText(text3, 590, 360);
+
         canvas.addEventListener('mousedown', function() {
           mouseDown = true;
         }, false);
